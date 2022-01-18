@@ -19,6 +19,7 @@ export default function ImageCard({ imgLink, photographer, title, description, d
             }
         });
     };
+
     return (
         <>
             <div className="h-full border-2 border-nasa_gray border-opacity-60 rounded-lg overflow-hidden">
@@ -27,7 +28,6 @@ export default function ImageCard({ imgLink, photographer, title, description, d
                     <h2 className="tracking-widest text-xs title-font font-medium text-nasa_red mb-1">{photographer || "Unknown"} | {formattedDate}</h2>
                     <h1 className="title-font text-lg font-medium text-black mb-3">{title}</h1>
                     <p className="leading-relaxed mb-3 line-clamp-3">{description}</p>
-                    {/* footer: TODO: make it stay all the way at the bottom */}
                     <div className="flex items-center flex-wrap ">
                         <button className="text-nasa_blue inline-flex items-center md:mb-2 lg:mb-0" onClick={() => setOpenModal(true)}>
                             Learn More
@@ -48,7 +48,7 @@ export default function ImageCard({ imgLink, photographer, title, description, d
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
                             </svg>
                         </button>
-                        {openModal ? (
+                        {openModal && (
                             <DetailedModal
                                 like={like}
                                 setLike={setLike}
@@ -60,7 +60,7 @@ export default function ImageCard({ imgLink, photographer, title, description, d
                                 description={description}
                                 photographer={photographer}
                             />
-                        ) : null}
+                        )}
                     </div>
                 </div>
             </div>

@@ -2,7 +2,6 @@ import React from 'react';
 import toast from 'react-hot-toast';
 import Heart from "react-heart";
 
-
 export default function DetailedModal({ like, setLike, setOpenModal, imgLink, photographer, title, description, date, center }) {
     const handleShare = (e) => {
         e.preventDefault();
@@ -35,10 +34,10 @@ export default function DetailedModal({ like, setLike, setOpenModal, imgLink, ph
                         <div className="lg:w-4/5 mx-auto flex flex-wrap">
                             <img alt="ecommerce" className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src={imgLink} />
                             <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                                <h2 className="text-sm title-font text-nasa_red-dark tracking-widest">{photographer} </h2>
+                                <h2 className="text-sm title-font text-nasa_red-dark tracking-widest">{photographer || "Unknown Photographer"} </h2>
                                 <h1 className="text-nasa_blue-dark text-3xl title-font font-medium mb-1">{title}</h1>
                                 <div className="flex mb-4">
-                                    <span className="italic font-semibold">Taken at the {center} center on {date}</span>
+                                    <span className="italic font-semibold">Taken from the {center} center and uploaded on {date}</span>
                                 </div>
                                 <p className="leading-relaxed">{description}</p>
                                 <div className="flex pt-5">

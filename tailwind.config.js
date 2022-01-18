@@ -7,6 +7,7 @@ module.exports = {
       colors: {
         nasa_gray: {
           DEFAULT: "#aeb0b5",
+          dark: "#323a45"
         },
         nasa_blue: {
           DEFAULT: "#105bd8",
