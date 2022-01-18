@@ -8,8 +8,8 @@ export default function ImageGallery({ firstPage }) {
     const [data, setData] = useState([]);
 
     return (
-        <section className="text-gray-600 body-font">
-            <div className="container px-5 py-24 mx-auto">
+        <section className="bg-white text-gray-600 body-font">
+            <div className="container px-5 py-10 mx-auto">
                 <div className="flex flex-wrap -m-4">
                     {!data ? null : (
                         firstPage.data.collection.items.map((image) => (
